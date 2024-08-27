@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Places</title>
+     <style>
+        /* CSS for icon container */
+        .icon-container {
+            width: 50%;
+            overflow-x: scroll;
+            margin: 0 25%;
+            display: flex;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* CSS for individual icons */
+        .icon-container img {
+            width: 250px;
+            height: 40vh;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        /* CSS for two icons in a column */
+        .two-icons-container {
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-items: center;
+        }
+
+        /* CSS for individual icons in the second column */
+        .two-icons-container img {
+            width: 200px;
+            height: 30vh;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        h1{
+            text-align: center;
+            margin-top: 20px; /* Add some space between headings */
+            font-size: 24px;
+        }
+        body{
+            background-color: #f2f2f2;
+        }
+    </style> 
+</head>
+<body>
+    <h1>Explore States and Cities</h1> 
+
+    <!-- Icon container for the first row -->
+    <div class="icon-container">
+        <!-- Icon 1 - Link to Page 1 -->
+        <a href="/travel/delhi"><img src="static\delhi.jpg" alt="Icon 1"></a>
+        <!-- Icon 2 - Link to Page 2 -->
+        <a href="/travel/ahemdabad"><img src="static\ahemdabad.jpg" alt="Icon 2"></a>
+        <!-- Icon 3 - Link to Page 3 -->
+        <a href="/travel/lucknow"><img src="static\lucknow.jpg" alt="Icon 3"></a>
+        <!-- Icon 4 - Link to Page 4 -->
+        <a href="/travel/sikkim"><img src="static\sikkim.jpg" alt="Icon 4"></a>
+        <!-- Icon 5 - Link to Page 5 -->
+        <a href="/travel/lakshadweep"><img src="static\lakshadweep.jpg" alt="Icon 5"></a>
+        <!-- Icon 6 - Link to Page 6 -->
+        <a href="/travel/puducherry"><img src="static\puducherry.jpg" alt="Icon 6"></a>
+        <!-- Icon 7 - Link to Page 7 -->
+        <a href="/travel/mumbai"><img src="static\mumbai.jpg" alt="Icon 7"></a>
+        <!-- Icon 8 - Link to Page 8 -->
+        <a href="/travel/kashmir"><img src="static\kashmir.jpg" alt="Icon 8"></a>
+    </div>
+<h1>Popular Places</h1>
+   <!-- Second row of icons -->
+   <div class="icon-container">
+    <!-- Icon 9 - Link to Page 9 -->
+    <a href="/travel/lucknow"><img src="static\lucknow.jpg" alt="Icon 9"></a>
+    <!-- Icon 10 - Link to Page 10 -->
+    <a href="/travel/kashmir"><img src="static\kashmir.jpg" alt="Icon 10"></a>
+</div>
+</body>
+</html>

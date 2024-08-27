@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title%} {% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- <h1>ConnectLocal</h1> -->
+        <a href="/" class="home_nav">
+          <img
+            src="static\ConnectLocal.png"
+            alt="ConnectLocal logo"
+            width="200"
+          />
+        </a>
+        <h3 title="Chat with Community"><a href="/community" class="guide_nav">Community</a></h3>
+        <h3 title="Book a virtual guide">
+          <a href="/guides" class="guide_nav">Virtual Guide</a>
+        </h3>
+        <h3 title="Listen to local music">
+          <a href="/radio" class="radio_nav">Radio</a>
+        </h3>
+        <h3 title="Plan a trip">
+          <a href="/travel" class="travel_nav">Plan a trip</a>
+        </h3>
+        <h3 title="About Us">
+          <a href="/about" class="about_nav">About Us</a>
+        </h3>
+
+        <button class="login-button" onclick="navigateToLogin()">
+          <span class="circle1"></span>
+          <span class="circle2"></span>
+          <span class="circle3"></span>
+          <span class="circle4"></span>
+          <span class="circle5"></span>
+          <span class="text">Login</span>
+        </button>
+      </nav>
+    </header>
+    <main>
+      {% block content %}{% endblock %} {% block before_map %}{% endblock %} {%block map %}{% endblock %}
+    </main>
+    <footer>
+      <p>&copy; 2024 ConnectLocal</p>
+    </footer>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+        font-family: Helvetica, sans-serif;
+      }
+
+      .login-button {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: white;
+        background-color: #0c66ed;
+        padding: 1em 2em;
+        border: none;
+        border-radius: 0.6rem;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+      }
+
+      .login-button span:not(:nth-child(6)) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 30px;
+        width: 30px;
+        background-color: #171717;
+        border-radius: 50%;
+        transition: 0.6s ease;
+      }
+
+      .login-button span:nth-child(6) {
+        position: relative;
+      }
+
+      .login-button span:nth-child(1) {
+        transform: translate(-3.3em, -4em);
+      }
+
+      .login-button span:nth-child(2) {
+        transform: translate(-6em, 1.3em);
+      }
+
+      .login-button span:nth-child(3) {
+        transform: translate(-0.2em, 1.8em);
+      }
+
+      .login-button span:nth-child(4) {
+        transform: translate(3.5em, 1.4em);
+      }
+
+      .login-button span:nth-child(5) {
+        transform: translate(3.5em, -3.8em);
+      }
+
+      .login-button:hover span:not(:nth-child(6)) {
+        transform: translate(-50%, -50%) scale(4);
+        transition: 1.5s ease;
+      }
+
+      header {
+        background-color: #fff;
+        color: black;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      nav {
+        margin: -2px 5% -2px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav h1 {
+        margin-right: 30%;
+        margin-left: 3%;
+      }
+
+      nav img {
+        margin-left: 3%;
+        margin-right: 10%;
+      }
+
+      .home_nav {
+        margin-left: 3%;
+        margin-right: 10%;
+      }
+
+      .guide_nav {
+        color: black;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    </style>
+    <script>
+      function navigateToLogin() {
+        window.location.href = "/login";
+      }
+    </script>
+  </body>
+</html>
